@@ -35,7 +35,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
+      'vue$': 'vue/dist/vue.esm.js',
+      config: path.join(__dirname, 'config', process.env.NODE_ENV)
     }
   },
   devServer: {
