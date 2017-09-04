@@ -1,3 +1,6 @@
+require('bootstrap/dist/css/bootstrap.css')
+require('./assets/main.css')
+
 import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
@@ -23,6 +26,7 @@ const router = new VueRouter({
 })
 
 firebaseApp.auth().onAuthStateChanged(user => {
+  // console.log("auth:" + user)
   if (user) {
     store.dispatch('signIn', user)
     router.push('/dashboard')
